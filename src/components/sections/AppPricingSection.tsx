@@ -10,7 +10,7 @@ const appPlans = [
   {
     id: "basic-app",
     name: "Basic App",
-    price: "₹20,000",
+    price: "₹25,000",
     emoji: "🟢",
     color: "from-green-500/20 to-emerald-500/20",
     borderColor: "border-green-500/30",
@@ -30,7 +30,7 @@ const appPlans = [
   {
     id: "advanced-app",
     name: "Advanced App",
-    price: "₹25,000",
+    price: "₹30,000",
     emoji: "🔵",
     color: "from-blue-500/20 to-cyan-500/20",
     borderColor: "border-blue-500/30",
@@ -49,7 +49,7 @@ const appPlans = [
   {
     id: "basic-ai-app",
     name: "Basic AI App",
-    price: "₹30,000",
+    price: "₹35,000",
     emoji: "🟣",
     color: "from-purple-500/20 to-pink-500/20",
     borderColor: "border-purple-500/30",
@@ -67,7 +67,7 @@ const appPlans = [
   {
     id: "advanced-ai-app",
     name: "Advanced AI App",
-    price: "₹40,000",
+    price: "₹45,000",
     emoji: "🔴",
     color: "from-primary/20 to-red-600/20",
     borderColor: "border-primary/50",
