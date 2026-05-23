@@ -10,7 +10,7 @@ const websitePlans = [
   {
     id: "basic-website",
     name: "Basic Website",
-    price: "₹3,499",
+    price: "₹8,499",
     emoji: "🌐",
     badge: null,
     description: "Perfect for startups and small businesses.",
@@ -29,7 +29,7 @@ const websitePlans = [
   {
     id: "premium-website",
     name: "Premium Website",
-    price: "₹4,999",
+    price: "₹9,999",
     emoji: "⭐",
     badge: "MOST CHOSEN",
     description: "Ideal for businesses serious about online growth.",
