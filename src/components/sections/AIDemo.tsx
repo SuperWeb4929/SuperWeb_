@@ -73,8 +73,6 @@ export const AIDemo = () => {
     setInputVal("");
     setIsTyping(true);
 
-    const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
-
     const historyMessages = [
       ...messages.slice(-6).map((msg) => ({
         role: msg.sender === "bot" ? ("assistant" as const) : ("user" as const),
@@ -84,50 +82,17 @@ export const AIDemo = () => {
     ];
 
     try {
-      let response;
-      if (GROQ_API_KEY) {
-        // Direct call to Groq API (suitable for Render Static Sites where VITE_GROQ_API_KEY is defined in Dashboard)
-        let systemPrompt = "";
-        if (activeMode === "school") {
-          systemPrompt = "You are the SuperWeb Admissions Assistant for a premium academy. Answer the user's questions about admissions guidelines, curriculum options, bus routes, facilities, and academic requirements. Keep your answers brief (under 3 sentences), highly professional, polite, and encouraging. Suggest contacting Prathap V on WhatsApp at 9606664929 for scheduling a campus visit.";
-        } else if (activeMode === "business") {
-          systemPrompt = "You are the SuperWeb Business Lead Assistant. Your goal is to showcase SuperWeb's digital services (websites, custom school portals, apps, AI chatbot workflows) and help capture the user's interest. Keep responses under 3 sentences. Be extremely helpful, clear, and proactive in suggesting booking a 10-minute consultation call with our founder Prathap V (WhatsApp: 9606664929).";
-        } else {
-          systemPrompt = customInstruction;
-        }
-
-        const apiMessages = [
-          { role: "system", content: systemPrompt },
-          ...historyMessages,
-        ];
-
-        response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${GROQ_API_KEY}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            model: "llama-3.3-70b-versatile",
-            messages: apiMessages,
-            max_tokens: 150,
-            temperature: 0.7,
-          }),
-        });
-      } else {
-        // Proxy call to Express backend (fallback)
-        response = await fetch("/api/chat", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            messages: historyMessages,
-            activeMode,
-            customInstruction,
-          }),
-        });
-      }
+      const response = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: historyMessages,
+          activeMode,
+          customInstruction,
+        }),
+      });
 
       if (!response.ok) {
         throw new Error(`API error: ${response.status}`);
