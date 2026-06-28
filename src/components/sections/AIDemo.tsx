@@ -34,6 +34,7 @@ export const AIDemo = () => {
   const [inputVal, setInputVal] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   // Set initial greeting on mode change
   useEffect(() => {
@@ -55,7 +56,12 @@ export const AIDemo = () => {
   // Scroll to bottom on new messages
   useEffect(() => {
     if (messages.length > 1 || isTyping) {
-      chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+      if (chatContainerRef.current) {
+        chatContainerRef.current.scrollTo({
+          top: chatContainerRef.current.scrollHeight,
+          behavior: "smooth",
+        });
+      }
     }
   }, [messages, isTyping]);
 
@@ -245,7 +251,7 @@ export const AIDemo = () => {
               </div>
 
               {/* Chat Messages */}
-              <div className="flex-1 p-5 overflow-y-auto space-y-4 min-h-0">
+              <div ref={chatContainerRef} className="flex-1 p-5 overflow-y-auto space-y-4 min-h-0">
                 {messages.map((msg, i) => (
                   <div
                     key={i}
