@@ -59,7 +59,7 @@ export const Logo = ({ variant = "horizontal", className = "", size = 40 }: Logo
     >
       {/* Background glow behind the monogram */}
       <motion.path
-        d="M 15 18 L 45 18 L 20 42 L 50 42 L 72 18 L 84 42 L 96 18"
+        d="M 45 18 L 20 18 L 20 30 L 45 30 L 45 42 L 20 42 M 52 18 L 64 42 L 76 18 L 88 42 L 100 18"
         stroke="#2563EB"
         strokeWidth="11"
         strokeLinecap="round"
@@ -71,7 +71,7 @@ export const Logo = ({ variant = "horizontal", className = "", size = 40 }: Logo
       />
       {/* Main monogram path */}
       <motion.path
-        d="M 15 18 L 45 18 L 20 42 L 50 42 L 72 18 L 84 42 L 96 18"
+        d="M 45 18 L 20 18 L 20 30 L 45 30 L 45 42 L 20 42 M 52 18 L 64 42 L 76 18 L 88 42 L 100 18"
         stroke="currentColor"
         strokeWidth="10"
         strokeLinecap="round"
