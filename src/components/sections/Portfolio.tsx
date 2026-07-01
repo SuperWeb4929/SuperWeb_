@@ -30,7 +30,7 @@ const projects = [
     icon: LayoutPanelLeft,
     glowColor: "rgba(34, 197, 94, 0.15)", // Emerald
     color: "from-emerald-600/10 to-transparent",
-    link: "https://zoro-landingpage.onrender.com",
+    link: "https://zoro-landingpage-o8td.onrender.com",
   },
 ];
 
