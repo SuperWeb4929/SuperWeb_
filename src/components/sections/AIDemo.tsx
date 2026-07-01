@@ -25,6 +25,78 @@ const customSuggestions = [
   "Write a tagline for a science school.",
 ];
 
+const renderMessageText = (text: string) => {
+  return text.split("\n").map((line, index) => {
+    if (line.trim() === "") {
+      return <div key={index} className="h-2" />;
+    }
+
+    const regex = /(\*\*.*?\*\*)/g;
+    
+    // Check if it's a bullet list item
+    if (line.trim().startsWith("- ")) {
+      const cleanLine = line.trim().slice(2);
+      const parts = cleanLine.split(regex);
+      return (
+        <div key={index} className="pl-5 mb-2 relative before:content-['•'] before:absolute before:left-1 before:text-blue-500 before:font-bold text-gray-300 leading-relaxed">
+          {parts.map((part, partIndex) => {
+            if (part.startsWith("**") && part.endsWith("**")) {
+              return (
+                <strong key={partIndex} className="font-bold text-white">
+                  {part.slice(2, -2)}
+                </strong>
+              );
+            }
+            return part;
+          })}
+        </div>
+      );
+    }
+
+    // Check if it's a numbered list item
+    const numMatch = line.trim().match(/^(\d+\.)\s+(.*)/);
+    if (numMatch) {
+      const numLabel = numMatch[1];
+      const contentText = numMatch[2];
+      const parts = contentText.split(regex);
+      return (
+        <div key={index} className="flex gap-2 pl-1 mb-2 text-gray-300 leading-relaxed">
+          <span className="font-bold text-blue-400 shrink-0 select-none">{numLabel}</span>
+          <div>
+            {parts.map((part, partIndex) => {
+              if (part.startsWith("**") && part.endsWith("**")) {
+                return (
+                  <strong key={partIndex} className="font-bold text-white">
+                    {part.slice(2, -2)}
+                  </strong>
+                );
+              }
+              return part;
+            })}
+          </div>
+        </div>
+      );
+    }
+
+    // Normal paragraph
+    const parts = line.split(regex);
+    return (
+      <p key={index} className="mb-2 text-gray-300 last:mb-0 leading-relaxed">
+        {parts.map((part, partIndex) => {
+          if (part.startsWith("**") && part.endsWith("**")) {
+            return (
+              <strong key={partIndex} className="font-bold text-white">
+                {part.slice(2, -2)}
+              </strong>
+            );
+          }
+          return part;
+        })}
+      </p>
+    );
+  });
+};
+
 export const AIDemo = () => {
   const [activeMode, setActiveMode] = useState<"school" | "business" | "custom">("school");
   const [customInstruction, setCustomInstruction] = useState("You are a friendly pirate developer assistant.");
@@ -295,7 +367,7 @@ export const AIDemo = () => {
                           : "bg-white/5 text-gray-300 border border-white/5 rounded-tl-none"
                       }`}
                     >
-                      {msg.text}
+                      {msg.sender === "user" ? msg.text : renderMessageText(msg.text)}
                     </div>
                   </div>
                 ))}
