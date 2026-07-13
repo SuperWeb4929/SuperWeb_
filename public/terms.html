@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions -- SuperWeb</title>
+<meta name="description" content="The agreement that governs every project SuperWeb delivers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06070a;--bg-alt:#0b0d12;--surface:rgba(255,255,255,0.033);--surface-hover:rgba(255,255,255,0.06);--border:rgba(255,255,255,0.08);--border-mid:rgba(255,255,255,0.13);--border-strong:rgba(255,255,255,0.18);--blue:#3b6bff;--blue-mid:#4f7fff;--blue-light:#6f93ff;--blue-glow:rgba(59,107,255,0.42);--text:#f2f4f8;--text-dim:#9aa2b1;--text-faint:#5c6472;--green:#34d399;--radius:14px;--radius-sm:9px;--t:0.2s ease;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6;}
+a{color:inherit;text-decoration:none;}::selection{background:var(--blue-glow);color:#fff;}
+.bg-atm{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(ellipse 900px 600px at 90% -8%,rgba(59,107,255,0.18),transparent 55%),radial-gradient(ellipse 700px 500px at -10% 18%,rgba(59,107,255,0.09),transparent 55%);}
+.grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:0.018;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+#progress{position:fixed;top:0;left:0;height:2.5px;width:0%;background:linear-gradient(90deg,var(--blue),var(--blue-light),#a5bfff);z-index:200;transition:width 0.06s linear;box-shadow:0 0 10px var(--blue-glow);}
+header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:66px;background:rgba(6,7,10,0.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:box-shadow 0.3s;}
+header.scrolled{box-shadow:0 1px 40px rgba(0,0,0,0.5);}
+.brand{display:flex;align-items:center;gap:12px;}
+.logo-mark{width:38px;height:38px;border-radius:var(--radius-sm);background:linear-gradient(145deg,#1a2444,#0d1220);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:#fff;box-shadow:0 0 22px rgba(59,107,255,0.28);transition:box-shadow var(--t),transform var(--t);}
+.brand:hover .logo-mark{box-shadow:0 0 32px rgba(59,107,255,0.5);transform:scale(1.05);}
+.brand-text{display:flex;flex-direction:column;line-height:1.2;}
+.brand-name{font-weight:800;font-size:15.5px;letter-spacing:-0.3px;}
+.brand-tag{font-size:8.5px;letter-spacing:1.5px;color:var(--text-faint);font-weight:700;text-transform:uppercase;}
+nav.links{display:flex;gap:32px;font-size:13.5px;color:var(--text-dim);font-weight:500;}
+nav.links a{padding:4px 0;transition:color var(--t);}nav.links a:hover{color:var(--text);}
+.header-cta{display:flex;align-items:center;gap:8px;background:var(--blue);color:#fff;font-size:13px;font-weight:700;padding:10px 20px;border-radius:var(--radius-sm);box-shadow:0 4px 18px rgba(59,107,255,0.35);transition:background var(--t),box-shadow var(--t),transform var(--t);white-space:nowrap;}
+.header-cta:hover{background:var(--blue-mid);box-shadow:0 6px 28px rgba(59,107,255,0.5);transform:translateY(-1px);}
+.mobile-toggle{display:none;background:none;border:none;color:var(--text);font-size:22px;cursor:pointer;padding:4px;}
+.hero{position:relative;z-index:1;padding:80px 48px 60px;max-width:1100px;}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;font-weight:800;letter-spacing:1.4px;color:var(--blue-light);text-transform:uppercase;background:rgba(59,107,255,0.07);border:1px solid rgba(59,107,255,0.28);padding:7px 15px;border-radius:100px;margin-bottom:26px;}
+.pulse-dot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px var(--green);animation:pulse 2.5s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.6;transform:scale(0.85);}}
+h1.hero-title{font-size:clamp(36px,5vw,58px);font-weight:900;letter-spacing:-2px;line-height:1.02;margin-bottom:22px;}
+h1.hero-title .accent{background:linear-gradient(135deg,var(--blue-light),#a5bfff);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-sub{font-size:16px;color:var(--text-dim);line-height:1.7;max-width:620px;margin-bottom:36px;}
+.meta-grid{display:flex;flex-wrap:wrap;gap:12px;}
+.meta-card{display:flex;flex-direction:column;gap:3px;background:var(--surface);border:1px solid var(--border);padding:13px 18px;border-radius:12px;min-width:148px;flex:1 1 148px;max-width:220px;transition:border-color var(--t),background var(--t);}
+.meta-card:hover{border-color:var(--border-mid);background:var(--surface-hover);}
+.meta-label{font-size:9.5px;color:var(--text-faint);letter-spacing:0.8px;font-weight:700;text-transform:uppercase;}
+.meta-val{font-size:13.5px;font-weight:700;color:var(--text);font-family:'Space Grotesk',sans-serif;}
+.layout{position:relative;z-index:1;display:grid;grid-template-columns:292px 1fr;gap:52px;max-width:1200px;margin:0 auto;padding:4px 48px 120px;}
+.sidebar{position:relative;}.sidebar-inner{position:sticky;top:88px;display:flex;gap:16px;}
+.scan-rail{position:relative;width:2px;flex-shrink:0;border-radius:2px;background:linear-gradient(to bottom,transparent,var(--border-strong) 8%,var(--border-strong) 92%,transparent);}
+.scan-dot{position:absolute;left:50%;transform:translate(-50%,-50%);width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 3px rgba(59,107,255,0.18),0 0 18px 4px var(--blue-glow),0 0 3px #fff;top:0;transition:top 0.18s cubic-bezier(0.4,0,0.2,1);}
+.toc{flex:1;font-size:13px;max-height:calc(100vh - 130px);overflow-y:auto;padding-right:8px;}
+.toc::-webkit-scrollbar{width:3px;}.toc::-webkit-scrollbar-thumb{background:var(--border-mid);border-radius:4px;}
+.toc-group{margin-bottom:22px;}
+.toc-cat{font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-faint);margin-bottom:7px;padding-left:8px;}
+.toc a{display:flex;align-items:baseline;gap:9px;padding:6px 8px;border-radius:8px;color:var(--text-dim);font-weight:500;transition:background .15s,color .15s;}
+.toc a .n{font-family:'Space Grotesk',sans-serif;font-size:10.5px;color:var(--text-faint);min-width:17px;flex-shrink:0;}
+.toc a:hover{background:var(--surface);color:var(--text);}
+.toc a.active{background:rgba(59,107,255,0.1);color:var(--blue-light);font-weight:700;}
+.toc a.active .n{color:var(--blue-light);}
+.content{min-width:0;}
+.cat-divider{display:flex;align-items:center;gap:14px;margin:42px 0 18px;}
+.cat-divider:first-child{margin-top:0;}
+.cat-divider .cat-label{font-size:11px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-faint);white-space:nowrap;}
+.cat-divider .line{flex:1;height:1px;background:var(--border);}
+.doc-sec{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px 30px;margin-bottom:14px;scroll-margin-top:96px;transition:border-color var(--t),background var(--t),box-shadow var(--t);}
+.doc-sec:hover{border-color:var(--border-mid);background:var(--surface-hover);box-shadow:0 4px 32px rgba(0,0,0,0.22);}
+.sec-head{display:flex;align-items:center;gap:14px;margin-bottom:14px;}
+.sec-num{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;color:var(--blue-light);background:rgba(59,107,255,0.1);border:1px solid rgba(59,107,255,0.22);width:33px;height:33px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background var(--t),border-color var(--t);}
+.doc-sec:hover .sec-num{background:rgba(59,107,255,0.18);border-color:rgba(59,107,255,0.38);}
+.sec-title{font-size:18.5px;font-weight:800;letter-spacing:-0.35px;line-height:1.3;}
+.doc-sec p{font-size:14.5px;line-height:1.75;color:var(--text-dim);margin-bottom:10px;}
+.doc-sec p:last-child{margin-bottom:0;}
+.doc-sec ul{margin:10px 0;padding-left:0;list-style:none;}
+.doc-sec li{font-size:14.5px;line-height:1.72;color:var(--text-dim);padding-left:22px;position:relative;margin-bottom:8px;}
+.doc-sec li:last-child{margin-bottom:0;}
+.doc-sec li::before{content:'';position:absolute;left:3px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--blue-light);opacity:0.7;}
+.doc-sec strong{color:var(--text);font-weight:700;}
+.callout{margin-top:14px;padding:14px 16px;border-radius:10px;font-size:13.5px;line-height:1.62;}
+.callout.warn{background:rgba(251,191,36,0.06);border:1px solid rgba(251,191,36,0.22);color:#fde68a;}
+.fab-toc{display:none;position:fixed;bottom:24px;right:24px;z-index:80;background:var(--blue);color:#fff;border:none;cursor:pointer;padding:14px 20px;border-radius:100px;font-size:13px;font-weight:700;font-family:'Inter',sans-serif;align-items:center;gap:8px;box-shadow:0 8px 28px rgba(59,107,255,0.45);transition:transform var(--t),box-shadow var(--t);}
+.fab-toc:hover{transform:translateY(-2px);box-shadow:0 12px 36px rgba(59,107,255,0.55);}
+.sheet-overlay{display:none;position:fixed;inset:0;z-index:90;background:rgba(0,0,0,0.65);backdrop-filter:blur(5px);}
+.sheet{position:fixed;bottom:0;left:0;right:0;z-index:91;background:var(--bg-alt);border-top:1px solid var(--border-strong);border-radius:22px 22px 0 0;max-height:78vh;overflow-y:auto;padding:22px 22px 36px;transform:translateY(100%);transition:transform 0.32s cubic-bezier(0.4,0,0.2,1);}
+.sheet.open{transform:translateY(0);}
+.sheet-handle{width:38px;height:4px;border-radius:4px;background:var(--border-strong);margin:0 auto 20px;}
+.back-top{display:none;position:fixed;bottom:24px;left:24px;z-index:80;width:44px;height:44px;background:var(--surface);border:1px solid var(--border-mid);color:var(--text-dim);border-radius:12px;cursor:pointer;align-items:center;justify-content:center;font-size:18px;box-shadow:0 4px 20px rgba(0,0,0,0.3);transition:background var(--t),border-color var(--t),color var(--t),transform var(--t);}
+.back-top.visible{display:flex;}.back-top:hover{background:var(--surface-hover);border-color:var(--border-strong);color:var(--text);transform:translateY(-2px);}
+footer{position:relative;z-index:1;background:var(--bg-alt);border-top:1px solid var(--border);padding:60px 48px 36px;}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:52px;padding-bottom:52px;border-bottom:1px solid var(--border);}
+.footer-logo-row{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
+.footer-logo-box{width:40px;height:40px;border-radius:var(--radius-sm);background:linear-gradient(145deg,#1a2444,#0d1220);border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:14px;color:#fff;box-shadow:0 0 20px rgba(59,107,255,0.22);flex-shrink:0;}
+.footer-brand-name{font-weight:800;font-size:17px;letter-spacing:-0.3px;}
+.footer-tagline{font-size:9px;letter-spacing:1.6px;color:var(--text-faint);font-weight:700;text-transform:uppercase;}
+.footer-desc{font-size:13.5px;color:var(--text-faint);line-height:1.7;margin-bottom:22px;max-width:280px;}
+.footer-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.22);padding:7px 12px;border-radius:100px;font-size:11px;font-weight:700;color:#34d399;}
+.footer-badge .dot{width:6px;height:6px;border-radius:50%;background:#34d399;box-shadow:0 0 8px #34d399;animation:pulse 2s infinite;}
+.footer-col-title{font-size:11px;font-weight:800;letter-spacing:1.1px;text-transform:uppercase;color:var(--text-faint);margin-bottom:18px;}
+.footer-links{display:flex;flex-direction:column;gap:12px;}
+.footer-links a{font-size:13.5px;color:var(--text-dim);font-weight:500;transition:color var(--t),padding-left var(--t);}
+.footer-links a:hover{color:var(--text);padding-left:5px;}
+.footer-bottom{max-width:1200px;margin:32px auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-copy{font-size:12.5px;color:var(--text-faint);}
+.footer-legal-links{display:flex;gap:22px;flex-wrap:wrap;}
+.footer-legal-links a{font-size:12.5px;color:var(--text-faint);transition:color var(--t);}
+.footer-legal-links a:hover{color:var(--text-dim);}
+@media(max-width:1024px){.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}}
+@media(max-width:900px){header{padding:0 20px;height:60px;}nav.links,.header-cta{display:none;}.mobile-toggle{display:block;}.hero{padding:44px 20px 36px;}.layout{grid-template-columns:1fr;padding:0 20px 100px;gap:0;}.sidebar{display:none;}.fab-toc{display:flex;}.back-top{bottom:80px;}footer{padding:44px 20px 28px;}.footer-grid{grid-template-columns:1fr 1fr;gap:28px;padding-bottom:36px;}.footer-bottom{flex-direction:column;align-items:flex-start;gap:10px;}}
+@media(max-width:520px){.footer-grid{grid-template-columns:1fr;}.meta-card{min-width:0;flex:1 1 45%;}.footer-legal-links{gap:12px;}}
+</style>
+</head>
+<body>
+<div class="bg-atm"></div>
+<div class="grain"></div>
+<div id="progress"></div>
+<header id="hdr">
+  <a href="/" class="brand"><div class="logo-mark">SW</div><div class="brand-text"><span class="brand-name">SuperWeb</span><span class="brand-tag">We Build. You Grow.</span></div></a>
+  <nav class="links"><a href="/">Home</a><a href="/#services">Services</a><a href="/#portfolio">Portfolio</a><a href="/#pricing">Pricing</a><a href="/#contact">Contact</a></nav>
+  <a href="https://wa.me/919606664929" target="_blank" rel="noopener noreferrer" class="header-cta">&#128172; Chat on WhatsApp</a>
+  <button class="mobile-toggle" id="navToggle">&#9776;</button>
+</header>
+<section class="hero">
+  <div class="eyebrow"><span class="pulse-dot"></span> Legal Agreement &nbsp;&middot;&nbsp; 31 Clauses</div>
+  <h1 class="hero-title">Terms &amp; <span class="accent">Conditions.</span></h1>
+  <p class="hero-sub">The agreement that governs every project SuperWeb delivers &mdash; written in plain language wherever we could, precise language wherever we had to be.</p>
+  <div class="meta-grid">
+    <div class="meta-card"><span class="meta-label">Effective Date</span><span class="meta-val">July 13, 2026</span></div>
+    <div class="meta-card"><span class="meta-label">Governing Law</span><span class="meta-val">India</span></div>
+    <div class="meta-card"><span class="meta-label">Jurisdiction</span><span class="meta-val">Bengaluru, KA</span></div>
+    <div class="meta-card"><span class="meta-label">Version</span><span class="meta-val">1.0</span></div>
+  </div>
+</section>
+<div class="layout">
+  <aside class="sidebar"><div class="sidebar-inner"><div class="scan-rail"><div class="scan-dot" id="scanDot"></div></div><nav class="toc" id="toc"></nav></div></aside>
+  <main class="content" id="content"></main>
+</div>
+<button class="fab-toc" id="fabBtn">&#128209; Contents</button>
+<div class="sheet-overlay" id="sheetOverlay"></div>
+<div class="sheet" id="sheet"><div class="sheet-handle"></div><nav class="toc" id="tocMobile" style="max-height:62vh;font-size:14px;"></nav></div>
+<button class="back-top" id="backTop" title="Back to top">&#8593;</button>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo-row"><div class="footer-logo-box">SW</div><div><div class="footer-brand-name">SuperWeb</div><div class="footer-tagline">We Build. You Grow.</div></div></div>
+      <p class="footer-desc">Professional digital solutions crafted for businesses, schools, and startups across India.</p>
+      <div class="footer-badge"><span class="dot"></span> Active &amp; Accepting Projects</div>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <div class="footer-links"><a href="/#services">Website Design</a><a href="/#services">E-commerce</a><a href="/#services">PWA Development</a><a href="/#services">AI Integrations</a><a href="/#services">Web Hosting &amp; Domains</a><a href="/#services">SEO Optimization</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <div class="footer-links"><a href="/">Home</a><a href="/#portfolio">Portfolio</a><a href="/#pricing">Pricing</a><a href="/#contact">Contact Us</a><a href="https://wa.me/919606664929" target="_blank" rel="noopener noreferrer">WhatsApp</a></div>
+    </div>
+    <div>
+      <div class="footer-col-title">Legal</div>
+      <div class="footer-links"><a href="terms.html" style="color:var(--blue-light);">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="#">Cookie Policy</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; <span id="yr"></span> SuperWeb. All rights reserved. Bengaluru, Karnataka, India.</span>
+    <div class="footer-legal-links"><a href="terms.html">Terms &amp; Conditions</a><a href="#">Privacy Policy</a><a href="#">Refund Policy</a><a href="/#contact">Contact</a></div>
+  </div>
+</footer><script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+window.addEventListener('scroll',function(){document.getElementById('hdr').classList.toggle('scrolled',window.scrollY>10);},{passive:true});
+var D=[
+{c:"Overview & Scope",i:[
+{n:1,t:"Services Offered",h:"<p>SuperWeb provides professional digital solutions including, but not limited to:</p><ul><li>Website Design &amp; Development</li><li>Business Websites &amp; E-commerce Websites</li><li>Progressive Web Applications (PWAs)</li><li>Custom Web Applications &amp; UI/UX Design</li><li>Website Redesign</li><li>Domain Registration &amp; Web Hosting Assistance</li><li>Website Maintenance &amp; Technical Support</li><li>Search Engine Optimization (SEO), where included</li><li>AI Integrations and AI-powered Solutions, where agreed</li></ul><p>The exact scope of work for each project is defined in the quotation or proposal provided to the client.</p>"},
+{n:2,t:"Quotations & Pricing",h:"<ul><li>All quotations are valid for <strong>15 days</strong> from the date of issue.</li><li>Prices may change after the quotation validity expires.</li><li>Additional features requested after quotation approval may incur additional charges.</li><li>All prices are quoted in Indian Rupees (INR) unless otherwise stated.</li><li>Government taxes, if applicable, are charged separately.</li></ul>"},
+{n:4,t:"Project Timeline",h:"<p>Project timelines are estimates and depend upon timely payments, client approvals, content submission, required documents, and revision requests. Any delay from the client may automatically extend the delivery date.</p>"},
+{n:7,t:"Project Scope",h:"<p>The quotation includes only the features specifically mentioned. Any request outside the approved scope is treated as a separate change request and quoted accordingly.</p>"}
+]},
+{c:"Payments & Ownership",i:[
+{n:3,t:"Payment Terms",h:"<ul><li>A <strong>15% advance payment</strong> is required before work begins.</li><li>The remaining amount may be paid in multiple installments during development.</li><li><strong>Full payment must be completed before final deployment, source code transfer, or handover.</strong></li><li>Domain and hosting charges are included only for eligible non-AI website packages.</li><li>AI-powered websites, integrations, and cloud services may incur separate charges.</li><li>Payments made after development begins are generally non-refundable.</li><li><strong>No project may remain unpaid for more than 60 calendar days</strong> from the invoice date.</li></ul>"},
+{n:8,t:"Ownership & Intellectual Property",h:"<p>Upon receipt of full payment, the client receives ownership of website files, custom designs, and project content they supplied.</p><p>Until full payment is received, all designs, source code, graphics, databases, and application files remain the intellectual property of SuperWeb.</p>"},
+{n:10,t:"Domain & Hosting",h:"<ul><li>Domain registration and hosting are included only in eligible non-AI website packages.</li><li>AI-powered websites or projects requiring additional cloud infrastructure are billed separately unless otherwise agreed.</li><li>Domain ownership belongs to the client after all applicable payments are completed.</li><li>Hosting renewal remains the client's responsibility unless covered under an active maintenance plan.</li><li>Failure to renew may result in downtime or permanent data loss.</li></ul>"},
+{n:30,t:"Client Payment Commitment",h:"<p>By accepting a quotation and paying the advance, the client agrees to follow the agreed payment schedule. Failure to make payments may result in suspension of development, delayed delivery, suspension of hosted services, project archiving, and legal recovery of outstanding dues where applicable.</p>"}
+]},
+{c:"Client Responsibilities",i:[
+{n:5,t:"Client Responsibilities",h:"<p>The client agrees to provide business information, logos, images, videos, website content, contact details, social media links, required documents, and necessary approvals in a timely manner, and is responsible for ensuring all provided content is accurate, lawful, and properly licensed.</p>"},
+{n:6,t:"Revisions",h:"<ul><li>Two (2) design revisions are included, unless otherwise specified.</li><li>Minor changes are free within the revision limit.</li><li>Major redesign requests after approval are treated as additional work.</li><li>Revisions beyond the included limit may incur extra charges.</li></ul>"},
+{n:11,t:"Website Content",h:"<p>The client is solely responsible for all uploaded content. SuperWeb is not liable for copyright infringement, trademark violations, illegal content, or claims arising from client-provided material.</p>"},
+{n:27,t:"Client Delays",h:"<p>If the client fails to provide content, approvals, or feedback within <strong>30 consecutive days</strong>, SuperWeb may place the project on hold. Extended delays may require revised timelines or additional charges.</p>"},
+{n:28,t:"Abandoned Projects",h:"<p>With no meaningful communication for <strong>30&#8211;45 consecutive days</strong>, SuperWeb reserves the right to archive the project. Resuming an archived project may require re-scheduling, updated pricing, and additional development charges.</p>"}
+]},
+{c:"Delivery & Support",i:[
+{n:12,t:"Delivery",h:"<p>A project is considered complete when the agreed scope has been delivered, the client has had a reasonable opportunity to review it, and final payment has been completed. Requests made after delivery are treated as maintenance or new development work.</p>"},
+{n:13,t:"Support",h:"<p>Support generally covers bug fixes, technical guidance, and minor assistance. It does not include new features, major redesigns, content updates, or third-party issues unless specifically covered by a maintenance agreement.</p>"},
+{n:26,t:"Maintenance Policy",h:"<p>Maintenance covers only what's included in the selected plan. It does not cover new features, redesigns, additional pages, content creation, or third-party subscription costs.</p><div class='callout warn'><strong>Authentication costs are billed separately</strong> from annual maintenance &mdash; including OTP verification, SMS gateway fees, Firebase/Google/Apple/Microsoft sign-in, and other usage-based authentication charges.</div>"},
+{n:29,t:"PWA Limitations",h:"<p>Progressive Web Apps operate within the capabilities of modern browsers and mobile OSes. Features like installation, push notifications, offline mode, and hardware access can vary across Android, iOS, and device manufacturers.</p><p>SuperWeb builds to current web standards but cannot guarantee identical functionality across all devices and is not responsible for limitations caused by the client's device, OS, or third-party software.</p>"}
+]},
+{c:"Legal & Liability",i:[
+{n:14,t:"Cancellation",h:"<p>If the client cancels after work has begun, advance payments are non-refundable, completed work is billed accordingly, and any unpaid balance remains payable. SuperWeb also reserves the right to cancel a project in cases of abuse, non-payment, or repeated violation of these Terms.</p>"},
+{n:15,t:"Limitation of Liability",h:"<p>SuperWeb is not liable for business losses, revenue or profit loss, data loss, cyber attacks, malware, server failures, third-party outages, search ranking changes, or acts beyond our reasonable control.</p>"},
+{n:16,t:"Confidentiality",h:"<p>Confidential business information shared by the client is treated with reasonable care and not disclosed to third parties unless required by law or necessary for project completion.</p>"},
+{n:19,t:"Force Majeure",h:"<p>SuperWeb is not responsible for delays caused by natural disasters, government restrictions, internet or power outages, pandemics, war, civil disturbances, or other events beyond reasonable control.</p>"},
+{n:25,t:"Security Disclaimer",h:"<p>SuperWeb follows modern security practices, but no website or application can be guaranteed completely secure. SuperWeb is not responsible for incidents arising from outdated software, weak passwords, client actions, or third-party vulnerabilities.</p>"},
+{n:31,t:"Governing Law",h:"<p>These Terms are governed by the laws of <strong>India</strong>. Disputes are subject to the exclusive jurisdiction of the competent courts in <strong>Bengaluru, Karnataka</strong>, unless applicable law requires otherwise.</p>"}
+]},
+{c:"Other Policies",i:[
+{n:9,t:"Third-Party Services",h:"<p>Projects may rely on third-party services such as hosting providers, domain registrars, Firebase, Google Services, Cloudflare, payment gateways, maps APIs, email providers, SMS gateways, and AI providers. SuperWeb is not responsible for interruptions, pricing changes, API limits, outages, or policy changes imposed by these providers.</p>"},
+{n:17,t:"Portfolio Rights",h:"<p>Unless otherwise agreed in writing, SuperWeb reserves the right to display completed projects in its portfolio, website, social media, and marketing materials.</p>"},
+{n:18,t:"Communication",h:"<p>Official communication may take place via email, WhatsApp, phone, or video meetings. Clients are encouraged to confirm important project decisions in writing.</p>"},
+{n:20,t:"Refund Policy",h:"<p>Because each project is custom-built, advance payments are generally non-refundable once work begins. Purchased domains, hosting, software licenses, APIs, and third-party services are non-refundable.</p>"},
+{n:21,t:"Acceptance",h:"<p>Payment of the advance, or written approval of a quotation, constitutes acceptance of these Terms &amp; Conditions.</p>"},
+{n:22,t:"Privacy",h:"<p>Client information is used solely for project execution, communication, billing, support, and legal compliance. SuperWeb does not sell or share client information without consent, except where legally required.</p>"},
+{n:23,t:"Licensed Assets",h:"<p>Projects may include third-party assets such as fonts, icons, plugins, templates, and stock images. These remain subject to their original licenses &mdash; renewal costs, where applicable, are the client's responsibility.</p>"},
+{n:24,t:"SEO Disclaimer",h:"<p>Where SEO services are included, SuperWeb follows industry best practices but does not guarantee first-page rankings, specific keyword positions, or increased traffic and sales.</p>"}
+]}
+];
+var ct=document.getElementById('content'),toc=document.getElementById('toc'),tocM=document.getElementById('tocMobile'),sels=[];
+D.forEach(function(g){
+  var dv=document.createElement('div');dv.className='cat-divider';dv.innerHTML='<span class="cat-label">'+g.c+'</span><div class="line"></div>';ct.appendChild(dv);
+  var te=document.createElement('div');te.className='toc-group';te.innerHTML='<div class="toc-cat">'+g.c+'</div>';
+  var tm=document.createElement('div');tm.className='toc-group';tm.innerHTML='<div class="toc-cat">'+g.c+'</div>';
+  g.i.forEach(function(item){
+    var id='sec-'+item.n;
+    var s=document.createElement('section');s.className='doc-sec';s.id=id;
+    s.innerHTML='<div class="sec-head"><div class="sec-num">'+item.n+'</div><h2 class="sec-title">'+item.t+'</h2></div>'+item.h;
+    ct.appendChild(s);sels.push(s);
+    var a=document.createElement('a');a.href='#'+id;a.dataset.target=id;a.innerHTML='<span class="n">'+item.n+'</span>'+item.t;te.appendChild(a);
+    var am=a.cloneNode(true);am.addEventListener('click',cls);tm.appendChild(am);
+  });
+  toc.appendChild(te);tocM.appendChild(tm);
+});
+var al=toc.querySelectorAll('a'),sd=document.getElementById('scanDot'),rl=document.querySelector('.scan-rail'),pg=document.getElementById('progress'),bt=document.getElementById('backTop');
+function spy(){
+  var st=window.scrollY,dh=document.documentElement.scrollHeight-window.innerHeight;
+  pg.style.width=(dh>0?Math.min(100,st/dh*100):0)+'%';
+  bt.classList.toggle('visible',st>400);
+  var cur=sels[0]?sels[0].id:'';
+  for(var i=0;i<sels.length;i++){if(sels[i].getBoundingClientRect().top<160)cur=sels[i].id;}
+  al.forEach(function(a){a.classList.toggle('active',a.dataset.target===cur);});
+  var al2=toc.querySelector('a.active');
+  if(al2&&rl){var rr=rl.getBoundingClientRect(),lr=al2.getBoundingClientRect(),rt=lr.top-rr.top+lr.height/2;sd.style.top=Math.max(0,Math.min(rl.offsetHeight,rt))+'px';}
+}
+window.addEventListener('scroll',spy,{passive:true});window.addEventListener('resize',spy);spy();
+bt.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+var fb=document.getElementById('fabBtn'),sh=document.getElementById('sheet'),so=document.getElementById('sheetOverlay');
+function opn(){sh.classList.add('open');so.style.display='block';}
+function cls(){sh.classList.remove('open');so.style.display='none';}
+fb.addEventListener('click',opn);so.addEventListener('click',cls);
+document.getElementById('navToggle').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
+</script>
+</body>
+</html>
