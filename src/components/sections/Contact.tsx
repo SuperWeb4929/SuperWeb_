@@ -308,9 +308,9 @@ export const Contact = () => {
                   </a>
                 </li>
                 {[
-                  { label: "Privacy Policy", href: "#" },
-                  { label: "Refund Policy", href: "#" },
-                  { label: "Cookie Policy", href: "#" },
+                  { label: "Privacy Policy", href: "/privacy.html" },
+                  { label: "Refund Policy", href: "/refund.html" },
+                  { label: "Cookie Policy", href: "/cookie.html" },
                 ].map((l) => (
                   <li key={l.label}>
                     <a href={l.href} className="text-sm text-gray-500 hover:text-white transition-colors duration-150 flex items-center gap-1.5 group">
@@ -338,8 +338,8 @@ export const Contact = () => {
               >
                 Terms &amp; Conditions <ExternalLink className="w-3 h-3" />
               </a>
-              <a href="#" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-gray-400 transition-colors">Refund Policy</a>
+              <a href="/privacy.html" className="hover:text-gray-400 transition-colors">Privacy Policy</a>
+              <a href="/refund.html" className="hover:text-gray-400 transition-colors">Refund Policy</a>
               <a href="#contact" className="hover:text-gray-400 transition-colors">Contact</a>
             </div>
           </div>
