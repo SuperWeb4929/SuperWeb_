@@ -28,10 +28,20 @@ export const Navbar = () => {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    const isMobile = isMobileMenuOpen;
     setIsMobileMenuOpen(false);
-    const target = document.querySelector(href);
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const scrollToTarget = () => {
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+    // On mobile, wait for the menu close animation (200ms) before scrolling
+    // so the layout is stable and the scroll lands in the right place
+    if (isMobile) {
+      setTimeout(scrollToTarget, 250);
+    } else {
+      scrollToTarget();
     }
   };
 
